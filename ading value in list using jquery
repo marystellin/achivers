@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Basics</title>
+    <script
+    src="http://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $("#but").click(function(){
+              val=$("#tex").val()
+              $("select").append("<option>"+val+"</option>");
+          }) ;
+        });
+    </script>
+    </head>
+    <body>
+        <h1>ADDING NEW VALUE</h1>
+        <input type="text" id="tex">
+        <button type="button" id="but">click me</button>
+        <select>
+        <option value="1"></option>
+        </select>
+</body>
+</html>
