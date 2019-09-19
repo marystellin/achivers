@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>change color</title>
+
+    <style>
+        div{
+            width: 50px;
+            border: solid black;
+            height: 50px;
+            float: left;
+            float:center;
+        }
+        button{
+            margin-top: 100px;
+        }
+ </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#but1").mouseup(function () {
+                $("div").css("background-color", "aqua")
+            });
+
+            $("#but1").mousedown(function () {
+                $("div").css("background-color", "pink")
+            });
+
+
+            $("#but2").mousedown(function () {
+                $("div").css("border-radius", "25px")
+            });
+            $("#but2").mouseup(function () {
+                $("div").css("border-radius", "0")
+            });
+            $("#but3").click(function () {
+                $("body").append("<div></div>")
+            });
+            $("#but4").click(function () {
+                $("body").prepend("<div></div>")
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <center><h1>BOXES</h1></center>
+    <div id="box1" ></div>
+    <div id="box2" ></div>
+    <div id="box3" ></div>
+   
+    <button type="button" id="but1">toggle colors</button>
+    <button type="button" id="but2">toggle rounded borders</button>
+    <button type="button" id="but3">add a new box</button>
+    <button type="button" id="but4">adding box in front</button>
+</body>
+
+</html>
